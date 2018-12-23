@@ -1,0 +1,111 @@
+<view class='content'>
+  <!-- 轮播 -->
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}"  indicator-color='#f2e1d5' indicator-active-color='#f7c72e'>
+    <block wx:for="{{imgUrls}}" wx:key="xxx">
+      <swiper-item>
+        <image src="{{item}}"  class="slide-image"/>
+      </swiper-item>
+    </block>
+  </swiper>
+  <!-- 主要内容 -->
+  <view class='main'>
+    <!-- 商品名称 价格 -->
+    <view class='title'>
+      <text class='commodity'>{{name}}</text>
+      <text class='Price'>{{price}}</text>
+    </view>
+
+    <!-- 商品描述 -->
+    <view class='describe'>
+      <view class='up'>
+        <text>配送费：￥1.00</text>
+        <text>已售：{{sold}}</text>
+        <text>库存：{{stock}}</text>
+      </view>
+      <view class='down'>
+        {{describe}}
+      </view>
+    </view>
+
+    <!-- 活动信息 -->
+    <view class='item margintop' bindtap='tips'>
+      <image class='icon' src='../images/icon/活动.png'/>
+      <text class='myorder'>活动详情</text>
+      <text class='iconfont icon-jiantou'></text>
+    </view>
+
+    <!-- 商品参数 -->
+    <view class='item margintop' bindtap='chooseSezi'>
+      <image class='icon' src='../images/icon/商品管理.png'/>
+      <text class='myorder'>商品参数</text>
+      <text class='iconfont icon-jiantou'></text>
+    </view>
+
+    <!-- 用户评价 -->
+    <view class='item margintop' bindtap='evaluate'>
+      <image class='icon' src='../images/icon/评价.png'/>
+      <text class='myorder'>用户评价</text>
+      <text class='iconfont icon-jiantou'></text>
+    </view>
+
+
+    <!-- 图文详情 -->
+    <view class='pictureDescription'>
+      <view class='imagesText'>
+        <text>图文详情</text>
+      </view>
+      <view class='img' wx:for="{{graphic}}" wx:key="xxx">
+        
+        <image src='{{item}}' mode="widthFix" />
+      </view>
+    </view>
+
+  </view>
+
+
+  <!--隐藏区域  -->
+  <view class='maskLayer' wx:if="{{chooseSize}}" bindtap='hideModal' catchtouchmove='stopPageScroll'></view>
+
+  <view class='choose' wx:if="{{chooseSize}}" animation='{{animationData}}' catchtouchmove='stopPageScroll' >
+    <!-- 参数内容区 -->
+    <view class='com'>
+      <view class='flavor'>参数</view>
+      <view class='type'>
+        <view  wx:for="{{flavor}}" data-index='{{index}}' wx:key="xxx" bindtap="selection">
+          <view class="flavor_type {{activeIndex == index ? 'selection' : ''}}">{{item.name}}</view>
+        </view>
+      </view>
+      <view class='shu'>数量</view>
+      <view class='num'>
+          <button class='reduce' bindtap='reduce' hover-class='click'>-</button>
+          <view>{{commodityNumber}}</view>
+          <button class='plus' bindtap='plus' hover-class='click'>+</button>
+      </view>
+      <view class='totalPrice'>价格</view>
+      <view class='total'>
+        ￥{{price}}
+      </view>
+    </view>
+    
+    <!-- 弹出层底部 -->
+    <view class='bottom'>
+      <view class='choose_shoppingCart' bindtap='shoppingCart'>加入购物车</view>
+      <view class='choose_purchase'>立即购买</view>
+    </view>
+
+
+
+    <view class='close' bindtap='hideModal'>
+      <text class='iconfont icon-guanbi'></text>
+    </view>
+  </view>
+
+
+
+  <!-- 底部固定 -->
+  <view class='fixed'>
+    <view class='shoppingCart' bindtap='shoppingCart'>加入购物车</view>
+    <view class='purchase'  bindtap='chooseSezi'>立即购买</view>
+  </view>
+
+</view>

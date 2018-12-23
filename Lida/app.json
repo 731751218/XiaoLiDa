@@ -1,0 +1,48 @@
+{
+  "pages":[
+    
+    "pages/index/index",
+    "pages/classify/classify",
+    "pages/shopping/shopping",
+    "pages/personal/personal",
+    "pages/details/details"
+    
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#f7c72e",
+    "navigationBarTitleText": "校立达",
+    "navigationBarTextStyle":"#fff"
+  },
+  "tabBar": {
+    "color": "#a9aebb",
+    "borderStyle": "#d6d7dc",
+    "selectedColor": "#fd6476",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "pages/images/icon/shouye.png", 
+        "selectedIconPath": "pages/images/icon/shouye-hover.png" 
+      },
+      {
+        "pagePath": "pages/classify/classify",
+        "text": "分类",
+        "iconPath": "pages/images/icon/fenlei.png",
+        "selectedIconPath": "pages/images/icon/fenlei-hover.png"
+      },
+      {
+        "pagePath": "pages/shopping/shopping",
+        "text": "购物车",
+        "iconPath": "pages/images/icon/gouwuche.png",
+        "selectedIconPath": "pages/images/icon/gouwuche-hover.png"
+      },
+      {
+        "pagePath": "pages/personal/personal",
+        "text": "个人中心",
+        "iconPath": "pages/images/icon/geren.png",
+        "selectedIconPath": "pages/images/icon/geren-hover.png"
+      }
+    ]
+  }
+}
