@@ -1,0 +1,124 @@
+/* pages/classify/classify.wxss */
+page{
+  height: 100%;
+}
+/* 搜索 */
+.m-search{
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  padding: 0 15rpx;
+  font-size: 14px;
+  border-top: 1px solid rgba(18, 151, 54, .2);
+  background-color: #f7c72e;
+}
+.u-search{
+  position: relative;
+  display: flex;
+  color: #fff;
+  padding: 16rpx 0;
+}
+.u-search .icon-sousuo{
+  position: absolute;
+  top: 34rpx;
+  left: 20rpx;
+  font-size: 14px;
+}
+.u-search input{
+  width: 100%;
+  padding-left: 60rpx;
+  text-align: left;
+  height: 64rpx;
+  border-radius: 30rpx;
+  background-color: #deb329;
+}
+
+
+/* 左边 */
+.left{
+  position: fixed;
+  left: 0;
+  height: 100%;
+  width: 25%;
+  background-color: #fffae5;
+  font-size: 24rpx;
+  text-align: center;
+}
+.left .list{
+  padding: 36rpx 0;
+  height: 100rpx;
+  box-sizing: border-box;
+  color: #000;
+}
+.left .list-hover{
+  background-color: #fff;
+  color: #fec1c7;
+}
+/* 右边 */
+.right{
+  position: absolute;
+  right: 0;
+  width: 75%;
+}
+/* 一个商品 */
+.col{
+  position: relative;
+  display: flex;
+  height: 150rpx;
+  box-sizing: border-box;
+  padding: 13rpx;
+}
+/* 商品图片 */
+.col-left image{
+  width: 120rpx;
+  height: 120rpx;
+}
+/* 商品右边文字部分 */
+.col-right{
+  padding: 12rpx 0 12rpx 22rpx;
+  width:100%;
+}
+.col-right text{
+  display: block;
+}
+/* 商品标题 */
+.col-right .col-title{
+  font-size: 30rpx;
+}
+/* 惊爆价 */
+.col-right .price{
+  font-size: 22rpx;
+  color: #ee9413;
+}
+/* 价格 数字 */
+.col-right .price text{
+  display: inline;
+  font-size: 26rpx;
+}
+/* 已售 */
+.col-right .sold{
+  font-size: 22rpx;
+  color: #b5b4b0;
+}
+/* 加入购物车 */
+.shoppingCart{
+  position: absolute;
+  bottom: 20rpx;
+  right: 20rpx;
+  font-size: 20rpx;
+  width:160rpx;
+  padding: 0;
+  background-color: #fff;
+  color: #ee9413;
+}
+/* 加入购物车图标 */
+.shoppingCart .iconfont{
+  display: inline;
+  font-size: 20rpx;
+  margin-left: 10rpx;
+}
+/* 加入购物车点击态 */
+.btn-hover{
+  background-color: #ee9413;
+  color: #fff;
+}

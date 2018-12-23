@@ -1,0 +1,239 @@
+/* pages/details/details.wxss */
+
+swiper{
+  height: 400rpx;
+}
+.slide-image{
+  width: 100%;
+  height: 100%;
+}
+
+
+/* 内容区 */
+
+.main{
+  padding: 30rpx 36rpx 0;
+}
+/* 商品名称 */
+.commodity{
+  font-size: 40rpx;
+}
+/* 价格 */
+.Price{
+  display: block;
+  margin-top: 20rpx;
+  font-size: 30rpx;
+  color: #f00;
+}
+/* 商品描述上半部分：配送费 已售 库存 */
+.describe .up{
+  display: flex;
+  justify-content:space-between;
+  padding: 15rpx 0;
+}
+/* 配送费 已售 库存 */
+.describe .up text{
+  font-size: 22rpx;
+}
+/* 商品介绍 */
+.describe .down{
+  padding: 18rpx 0;
+  font-size: 30rpx;
+  line-height: 45rpx;
+}
+
+/* 公共样式 */
+.item{
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 15rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  border-bottom: 1px solid #c3c1c7;
+}
+.margintop{
+  margin-top: 20rpx;
+}
+/* 公共样式图标 */
+.icon{
+  width: 38rpx;
+  height: 38rpx;
+  margin-right: 34rpx;
+}
+/* 公共样式文字 */
+.item .myorder{
+  margin-right:auto;
+  font-size: 26rpx;
+}
+
+
+
+
+/* 底部固定 */
+.fixed{
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content:space-around;
+  background-color: #fff;
+  bottom: 0;
+  width: 100%;
+  height: 100rpx;
+  text-align: center;
+  border-top: 1px solid #f2f2f2;
+}
+.shoppingCart,.purchase{
+  width: 50%;
+  height: 100%;
+  /* border-radius: 20rpx; */
+  line-height: 100rpx;
+  font-size: 24rpx;
+}
+
+/* 加入购物车 */
+.fixed .shoppingCart{
+  color: #f7c72e;
+  background-color: #fd6476;
+}
+/* 立即购买 */
+.fixed .purchase{
+  color: #fd6476;
+  background-color: #f7c72e;
+}
+
+
+
+
+
+/* 图文详情 */
+.pictureDescription{
+  margin-top: 60rpx;
+  text-align: center;
+  font-size: 28rpx;
+  color: #aaa;
+  padding-bottom: 200rpx; 
+  
+}
+.imagesText{
+  padding: 30rpx 0;
+  margin-bottom: 30rpx;
+  background-color: #fafafc;
+}
+
+
+
+
+/* 遮罩层 */
+.maskLayer{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.2);
+}
+
+/* 选择 */
+.choose{
+  position: fixed;
+  bottom: 0;
+  z-index: 99;
+  width: 100%;
+  background: #FAFAFA;
+}
+/* 弹出层： 商品种类的容器 */
+.com{
+  padding: 30rpx;
+  /* min-height: 500rpx; */
+  font-size: 30rpx;
+}
+/* 弹出层： 立即购买和加入购物车 */
+.bottom{
+  display: flex;
+  text-align: center;
+}
+/* 弹出层： 立即购买和加入购物车 */
+.choose_shoppingCart,.choose_purchase{
+  width: 50%;
+  height: 100%;
+  font-size: 36rpx;
+  line-height: 100rpx;
+}
+/* 弹出层： 加入购物车 */
+.choose_shoppingCart{
+  color: #f7c72e;
+  background-color: #fd6476;
+}
+/* 弹出层： 立即购买 */
+.choose_purchase{
+  color: #fd6476;
+  background-color: #f7c72e;
+}
+/* 关闭遮罩层 */
+.close{
+  position: absolute;
+  top: 20rpx;
+  right: 30rpx;
+  
+}
+/* 关闭遮罩层：图标 */
+.close text{
+  font-size: 60rpx;
+}
+
+
+
+/* 口味 */
+.type{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-around;
+  align-items:center;
+  min-height: 140rpx;
+  padding: 20rpx 0;
+  /* background-color: #f00; */
+  text-align: center;
+}
+/* 口味: 对应的参数 */
+.flavor_type{
+  width: 140rpx;
+  height: 60rpx;
+  line-height: 40rpx;
+  padding: 10rpx;
+  box-sizing: border-box;
+  background-color: #f5f5f5;
+  font-size: 24rpx;
+  border-radius: 10rpx;
+}
+
+/* 数量的加减 */
+.num{
+  display: flex;
+  min-height: 100rpx;
+  align-items: center;
+}
+/* 加减的点击态 */
+.click{
+  background-color: #fd6476;
+}
+
+/* 加减按钮 */
+.num .plus,.num .reduce{
+  width: 90rpx;
+  height: 90rpx;
+}
+
+.total{
+  display: flex;
+  justify-content: center;
+  height: 50rpx;
+  line-height: 50rpx;
+  color: #fd6476;
+  font-size: 36rpx;
+}
+/* 口味:选中状态 */
+.selection{
+  background-color: #fd6476;
+  color: #fff;
+}
+
